@@ -1,0 +1,94 @@
+<meta charset = 'utf-8'>
+<script>
+    // пункт 1
+    let user = {
+    name: "Джон",
+    age: 30
+    };
+    user.sayHi = function() {
+        alert("Привет!");
+    };
+    user.sayHi(); // Привет!
+    // пункт 2
+    let buyer = {
+        name: "Джон",
+        age: 30,
+        pets: "Кошка",
+        book: "Отверженные",
+        color: "Зеленый"
+    };
+    buyer.sayHi = function() {
+        alert(this.name + "\n" +
+        this.book + "\n" + 
+        this.color);
+    };
+    buyer.sayHi(); // Привет!
+    // пункт 3
+    var user1 = {
+        name: "Ванда",
+        surname: "Максимум"
+    };
+    var orders = {
+        name: "Суши",
+        cost: 345
+    };
+    var rest = {
+        title: "Black Star",
+        chef: "Ванда"
+    };
+    if (user1.name == rest.chef) {
+        alert(orders.name + "\n" + orders.cost)
+    } else {
+        alert('ошибка')
+    }
+     // Задание 4.4
+    function User(name) {
+        this.name = name;
+        this.isAdmin = false;
+        }
+    let user2 = new User("Вася");
+    alert(user2.name); // Вася
+    alert(user2.isAdmin); // false
+
+
+    //Задание 4.5
+    function User1(name) {
+        this.name = name;
+        this.sayHi = function() {
+            alert("Меня зовут: " + this.name );
+        };
+    }
+    let vasya = new User1("Вася");
+    vasya.sayHi(); // Меня зовут: Вася
+    /*
+    vasya = {
+    name: &quot;Вася&quot;,
+    sayHi: function() { ... }
+    }
+    */
+    //Доп
+    function Calculator(first, second) {
+        this.first = first;
+        this.second = second;
+        this.add = function() {
+            alert("Add = " + (this.first + this.second));
+        };
+        this.sub = function() {
+            alert("Sub = " + (this.first - this.second));
+        };
+        this.mul = function() {
+            alert("Mul = " + (this.first * this.second));
+        };
+        this.div = function() {
+            alert("Div = " + (this.first / this.second));
+        };
+    }
+    calculator = new Calculator(parseInt(prompt("First: ")),
+                          parseInt(prompt("Second: ")));
+    calculator.add()
+    calculator.sub()
+    calculator.mul()
+    calculator.div()
+
+
+</script>
